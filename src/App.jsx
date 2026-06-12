@@ -23,7 +23,8 @@ function App(){
     }
     setWeather(data);
     } catch (err) {
-      setError("Failed to fetch data, Please try again");
+      console.error(err);
+      setError("Failed to fetch data, Pwease try again");
     } finally{
       setLoading(false);
     }
@@ -53,7 +54,7 @@ function App(){
           <p>Condition:{weather.weather[0].description}</p>
           <p>Wind speed:{weather.wind.speed} m/s</p>
         </div>
-        
+
       )}
 
     </div>
